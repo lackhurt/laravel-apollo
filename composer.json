@@ -1,0 +1,31 @@
+{
+  "name": "lackhurt/laravel-apollo",
+  "description": "Apollo agent for laravel.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lackhurt",
+      "email": "pangjn@yeah.net"
+    }
+  ],
+  "require": {
+    "lackhurt/apollo-client": "^0.1.0",
+    "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x",
+    "illuminate/console": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lackhurt\\Apollo\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Lackhurt\\Apollo\\Providers\\ApolloServiceProvider"
+      ],
+      "aliases": {
+        "Apollo": "Lackhurt\\Apollo\\ApolloFacade"
+      }
+    }
+  }
+}
