@@ -10,7 +10,7 @@ class PropertiesReader
 
     public function __construct($saveDir, $namespace)
     {
-        if (isset($namespace)) {
+        if (!isset($namespace)) {
             $namespace = 'application';
         }
 
