@@ -44,7 +44,7 @@ class PropertiesReader
         }
 
         try {
-            $config = include_once $dir . '/apolloConfig.' . $namespace . '.php';
+            $config = include $dir . '/apolloConfig.' . $namespace . '.php';
             if (isset($config['configurations'])) {
                 return $config['configurations'];
             } else {
