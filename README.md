@@ -1,7 +1,7 @@
 # Laravel Apollo integration.
 
 ## Installation
-Install the package via composer.
+Install the package via composer
 ```bash
 composer require lackhurt/laravel-apollo
 ```
@@ -35,4 +35,4 @@ php artisan apollo.start-agent
 ```
 
 ## License
-laravel-apollo is free software distributed under the terms of the MIT license.
+laravel-apollo is free software distributed under the terms of the [MIT license](https://opensource.org/licenses/MIT).
