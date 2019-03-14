@@ -15,7 +15,7 @@ class StartApolloAgent extends Command
      *
      * @var string
      */
-    protected $signature = 'apollo.start-agent';
+    protected $signature = 'apollo.start-agent {--mode=env}';
 
     /**
      * The console command description.
@@ -61,6 +61,11 @@ class StartApolloAgent extends Command
         $apolloClient = new ApolloClient(Config::get('apollo.config_server'), Config::get('apollo.app_id'), $namespaces);
         $apolloClient->setIntervalTimeout(Config::get('apollo.timeout_interval'));
         $apolloClient->setSaveDir(Config::get('apollo.save_dir'));
+
+        $mode = $this->option('mode');
+        if($mode == 'env') {
+            $apolloClient->setModifyEnv(true);
+        }
 
         return $apolloClient;
     }
